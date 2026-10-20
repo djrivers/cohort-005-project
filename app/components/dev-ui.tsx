@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Form, useLocation } from "react-router";
 import { Button } from "~/components/ui/button";
+import { FeedbackButton } from "~/components/feedback-button";
 import { cn } from "~/lib/utils";
 import type { UserRole } from "~/db/schema";
 import { ChevronDown, ChevronUp, Globe } from "lucide-react";
@@ -166,6 +167,7 @@ export function DevUI({ users, currentUser, devCountry, countryTierInfo, countri
             </div>
           )}
         </div>
+        {import.meta.env.DEV && <FeedbackButton />}
       </div>
     </div>
   );
